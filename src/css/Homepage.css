@@ -1,0 +1,154 @@
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.message {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    color: #a9a9a9;
+    font-size: 3em;
+}
+
+.message-error {
+    text-align: center;
+    color: #ff0000;
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    gap: 20px;
+    z-index: 9999;
+}
+
+.filters-types {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.filters-nations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.type-buttons {
+    padding: 5px;
+    background-color: #555555;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 5px;
+    max-width: 80px;
+}
+
+.nation-buttons {
+    padding: 5px;
+    background-color: #555555;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.button-all {
+    width: 50px;
+}
+
+.buttons-active {
+    background-color: #979797;
+}
+
+.nation-flag {
+    width: 20px;
+}
+
+.big-flag {
+    position: absolute;
+    left: 5px;
+    top: -45px;
+    display: none;
+    z-index: 99999;
+}
+
+.big-flag img {
+    width: 70px;
+}
+
+.nation-buttons:hover .big-flag {
+    display: block;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    max-height: 82%;
+    margin-top: 1%;
+}
+
+@media (max-width: 1700px) {
+    .filters-container {
+        flex-direction: column-reverse;
+    }
+    .filters-types {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .filters-nations {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .filters-nations .button-all {
+        height: 50px;
+    }
+    .nation-buttons {
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+    .cards-container {
+        gap: 5px;
+        max-height: 72%;
+    }
+}
+
+@media (max-width: 1070px) {
+    .cards-container {
+        max-height: 65%;
+    }
+}
+
+@media (max-width: 550px) {
+    .cards-container {
+        gap: 5px;
+        margin-top: 17%;
+        max-height: none;
+    }
+}
